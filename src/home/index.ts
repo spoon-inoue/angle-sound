@@ -6,7 +6,7 @@ const acceptModal = qs<HTMLDivElement>('.accept')
 const accept = qs<HTMLButtonElement>('.accept > button')
 
 const handleDeviceOrientation = (e: DeviceOrientationEvent) => {
-	angleAlpha.innerText = `${e.alpha} deg`
+	angleAlpha.innerText = `${e.alpha?.toFixed(0)} deg`
 }
 
 function hideAcceptModal() {
